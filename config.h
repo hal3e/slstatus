@@ -11,16 +11,17 @@ static const char unknown_str[] = "n/a";
 
 static const struct arg args[] = {
 	/* function     format        argument */
-	{ cpu_perc,     "0    |7%s%% ", NULL },
+	{ cpu_perc,     "2    |7%s%% ", NULL },
 	{ ram_perc,       "|1 |7%s%% ", NULL },
 	{ run_command,    "%s", "~/bin/get-volume.sh" },
 	{ battery_perc,   "|3 |7%s%% ", "BAT0" },
-	{ run_command,      "|2 |7%s ", "cat /home/hal3e/.local/share/xbps-num-packages" },
-	{ datetime,         "|0 |7%s ", "%d/%m %a" },
-	{ run_command,      "|1 |7%s ", "~/bin/ihlas-pt" },
-	{ datetime,         "|5 |7%s ", "%H:%M" },
+	{ run_command,      "|0 |7%s ", "cat ~/.local/share/xbps-num-packages" },
+	{ datetime,         "|2 |7%s ", "%d/%m %a" },
+	{ run_command,      "|1 |7%s ", "~/bin/vaktija mostar" },
+	{ datetime,         "|4 |7%s ", "%H:%M" },
+	{ run_command,            "%s ", "~/bin/vpn-status.sh" },
 	{ run_command,            "%s ", "~/bin/bluetooth-status.sh" },
-	{ run_command,            "%s" , "~/bin/wifi-status.sh" }
+	{ run_command,            "%s" , "~/bin/connection-status.sh" }
 };
 
 /*
